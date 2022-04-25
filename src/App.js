@@ -1,13 +1,15 @@
+import { Container } from './AppStyle'
+
 import Home from "./pages/Home";
 
 import GlobalStyle from "./Global/globalStyles";
 
 function App() {
   return (
-    <div className="App">
+    <Container>
       <GlobalStyle />
       <Home />
-    </div>
+    </Container>
   );
 }
 

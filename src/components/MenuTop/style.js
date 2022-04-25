@@ -8,13 +8,15 @@ export const Container = styled.div`
     width: 100%;
     border: solid 2px white;
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
 `
 
 export const GameName = styled.div`
 
-    
-
+    img{
+        
+        width: 100px;
+    }
 `
 
 export const GameScore = styled.div`

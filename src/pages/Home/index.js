@@ -1,4 +1,4 @@
-import { Body, Header } from "./style";
+import { Container } from "./style";
 
 import MenuTop from "../../components/MenuTop"
 import GameBoard from "../../components/GameBoard";
@@ -7,12 +7,10 @@ const Home = () => {
 
     return(
 
-        <Body>
-            <Header>
-                <MenuTop />
-                <GameBoard />
-            </Header>
-        </Body>
+        <Container>
+            <MenuTop />
+            <GameBoard />
+        </Container>
     )
 }
 
