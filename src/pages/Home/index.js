@@ -2,6 +2,7 @@ import { Container } from "./style";
 
 import MenuTop from "../../components/MenuTop"
 import GameBoard from "../../components/GameBoard";
+import GameRules from "../../components/GameRules";
 
 const Home = () => {
 
@@ -10,6 +11,7 @@ const Home = () => {
         <Container>
             <MenuTop />
             <GameBoard />
+            <GameRules />
         </Container>
     )
 }

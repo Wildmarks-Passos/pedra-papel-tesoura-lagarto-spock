@@ -6,4 +6,5 @@ export const Board = styled.section`
     justify-content: center;
     align-items: center;
     height: 100%;
+    padding: 60px 0;
 `

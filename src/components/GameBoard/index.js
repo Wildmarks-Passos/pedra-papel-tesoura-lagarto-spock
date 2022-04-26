@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Board } from "./style";
 
 import StepPlayerPick from "../StepPlayerPick";
@@ -13,7 +13,7 @@ const GameBoard = () => {
                 'paper',
                 'lizard'
             ],
-            loses: [
+            losses: [
                 'rock',
                 'cyan'
             ]
@@ -23,7 +23,7 @@ const GameBoard = () => {
                 'rock',
                 'cyan'
             ],
-            loses: [
+            losses: [
                 'scissors',
                 'lizard'
             ]
@@ -33,7 +33,7 @@ const GameBoard = () => {
                 'scissors',
                 'lizard'
             ],
-            loses: [
+            losses: [
                 'paper',
                 'cyan'
             ]
@@ -43,7 +43,7 @@ const GameBoard = () => {
                 'cyan',
                 'paper'
             ],
-            loses: [
+            losses: [
                 'rock',
                 'scissors'
             ]
@@ -53,15 +53,17 @@ const GameBoard = () => {
                 'scissors',
                 'rock'
             ],
-            loses: [
+            losses: [
                 'lizard',
                 'paper'
             ]
         }
     }
 
+    
     const [userPick, setUserPick] = useState(null)
     const [housePick, setHousePick] = useState(null)
+    const [isWinner, setIsWinner] = useState(null)
 
     function getUserPick(e) {
 
@@ -73,13 +75,14 @@ const GameBoard = () => {
         getHousePick()
     }
 
+    
     function getHousePick() {
-
+        
         let number = Math.floor(getRandomArbitrary(1, 6))
         let pick = null
         
         if(number === 1){
-
+            
             pick = 'scissors'
         }
         else if(number === 2){
@@ -106,7 +109,7 @@ const GameBoard = () => {
             
             setHousePick(pick)
 
-            console.log(rules.cyan.winner)
+            
         }, 1500)
     }
 
@@ -114,28 +117,52 @@ const GameBoard = () => {
 
         return Math.random() * (max - min) + min;
     }
-
+    
     function checkIsWinner( userPick, housePick ) {
 
-        if(userPick in `${rules}.${housePick}.winner`){
+        let winnersAndLosses = rules[userPick]
 
-            console.log('Perdeu')
+        if(winnersAndLosses.winner.includes(housePick)){
+
+            setIsWinner('YOU WIN')
+
+        }else if(winnersAndLosses.losses.includes(housePick)){
+
+            setIsWinner('YOU LOSS')
+
+        }else{
+
+            setIsWinner('TIE')
+
         }
+        
     }
-    
-    // function renderBoardState(e) {
 
-    // }
+    function btnPlayAgain() {
+
+        setHousePick(null)
+        setUserPick(null)
+    }
+
+    useEffect(() => {
+
+        if(housePick === null){
+            return
+        }
+
+        checkIsWinner(userPick, housePick)
+
+    }, [housePick])
     
         return(
-    
             <Board>
-                <StepPlayerPick render={true} getUserPick={getUserPick} />
+                <StepPlayerPick render={userPick === null ? true : false} getUserPick={getUserPick} />
                 <StepWinner 
-                    render={true}
+                    render={userPick !== null ? true : false}
                     userPick={userPick}
                     housePick={housePick}
-                    // isWinner={} 
+                    btnPlayAgain={btnPlayAgain}
+                    isWinner={isWinner} 
                 />
             </Board>
         )
