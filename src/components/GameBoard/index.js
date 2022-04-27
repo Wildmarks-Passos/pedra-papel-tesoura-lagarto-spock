@@ -4,7 +4,7 @@ import { Board } from "./style";
 import StepPlayerPick from "../StepPlayerPick";
 import StepWinner from "../StepWinner";
 
-const GameBoard = () => {
+const GameBoard = (props) => {
 
     const rules = {
 
@@ -126,6 +126,8 @@ const GameBoard = () => {
 
             setIsWinner('YOU WIN')
 
+            props.getScore()
+
         }else if(winnersAndLosses.losses.includes(housePick)){
 
             setIsWinner('YOU LOSS')
@@ -162,7 +164,7 @@ const GameBoard = () => {
                     userPick={userPick}
                     housePick={housePick}
                     btnPlayAgain={btnPlayAgain}
-                    isWinner={isWinner} 
+                    isWinner={isWinner}
                 />
             </Board>
         )

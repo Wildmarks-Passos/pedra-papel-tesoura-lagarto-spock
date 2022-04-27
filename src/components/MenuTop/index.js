@@ -2,7 +2,7 @@ import { Container, GameName, GameScore } from './style'
 
 import logo from '../../images/logo-bonus.svg'
 
-const MenuTop = () => {
+const MenuTop = (props) => {
 
     return(
         <Container>
@@ -11,7 +11,7 @@ const MenuTop = () => {
             </GameName>
             <GameScore>
                 <h5>SCORE</h5>
-                <p>12</p>
+                <p>{props.score}</p>
             </GameScore>
         </Container>
     )
