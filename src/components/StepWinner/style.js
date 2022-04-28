@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 
-    display: ${props => props.render === true ? 'flex' : 'none'};
+    display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;

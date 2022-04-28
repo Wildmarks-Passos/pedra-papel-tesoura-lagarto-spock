@@ -155,19 +155,29 @@ const GameBoard = (props) => {
         checkIsWinner(userPick, housePick)
 
     }, [housePick])
-    
-        return(
-            <Board>
-                <StepPlayerPick render={userPick === null ? true : false} getUserPick={getUserPick} />
-                <StepWinner 
+
+        if(!userPick){
+
+            return(
+
+                <Board>
+                    <StepPlayerPick render={userPick === null ? true : false} getUserPick={getUserPick} />
+                </Board>
+            )
+        }else{
+            return(
+
+                <Board>
+                    <StepWinner 
                     render={userPick !== null ? true : false}
                     userPick={userPick}
                     housePick={housePick}
                     btnPlayAgain={btnPlayAgain}
                     isWinner={isWinner}
                 />
-            </Board>
-        )
+                </Board>
+            )
+        }
 }
 
 export default GameBoard

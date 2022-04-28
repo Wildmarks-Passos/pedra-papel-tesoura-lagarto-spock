@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 
-    display: ${props => props.render === true ? 'block' : 'none'};
+    display: block;
     position: relative;
 `
 

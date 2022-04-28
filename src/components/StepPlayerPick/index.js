@@ -11,7 +11,7 @@ const StepPlayerPick = ( props ) => {
 
     return (
 
-        <Container render={props.render}>
+        <Container>
             <img alt="triangle" src={triangle}></img>
 
             <Pick 

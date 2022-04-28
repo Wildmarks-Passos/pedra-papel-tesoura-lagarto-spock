@@ -10,7 +10,7 @@ const StepWinner = (props) => {
 
     return(
 
-        <Container render={props.render}>
+        <Container>
             <PlayerPick>
                 <TextPlayer>YOU PICKED</TextPlayer>
                 <Pick borderBG={'var(--Rock-Gradient)'} render={props.userPick === 'rock' ? true : false}>
