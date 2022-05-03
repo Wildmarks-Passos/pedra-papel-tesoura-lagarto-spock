@@ -21,26 +21,37 @@ export const ButtonRules = styled.button`
 
 export const Rules = styled.div`
 
-    position: absolute;
-    display: flex;
+    position: fixed;
+    display: ${props => props.render === true ? 'flex' : 'none'};
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgba( 0, 0, 0, 0.5);
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
-
-    & :active {
-
-        overflow: hidden;
-
-    }
 
     div{
         background-color: white;
         padding: 15px 10px;
         border-radius: 10px;
+    }
+
+    .rulesCloseBtn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+
+        span{
+            font-weight: 700;
+            color: var(--Dark-Text);
+            font-size: 25px;
+        }
+
+        img{
+            cursor: pointer;
+        }
     }
 `

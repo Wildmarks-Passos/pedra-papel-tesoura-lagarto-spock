@@ -41,6 +41,10 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    body{
+        overflow: ${props => props.stateOverflow === true ? 'hidden' : 'initial'};
+    }
+
     h1, h2 {
         margin: 0;
         padding: 0;
