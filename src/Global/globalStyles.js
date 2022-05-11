@@ -8,16 +8,16 @@ const GlobalStyle = createGlobalStyle`
 
         // Primary
 
-        --Scissors-Gradient: hsl(39, 89%, 49%);
-        --Scissors-Gradient-shadow: hsl(40, 84%, 53%);
-        --Paper-Gradient: hsl(230, 89%, 62%);
-        --Paper-Gradient-shadow: hsl(230, 89%, 65%);
-        --Rock-Gradient: hsl(349, 71%, 52%);
-        --Rock-Gradient-shadow: hsl(349, 70%, 56%);
-        --Lizard-Gradient: hsl(261, 73%, 60%);
-        --Lizard-Gradient-shadow: hsl(261, 72%, 63%);
-        --Cyan: hsl(189, 59%, 53%);
-        --Cyan-shadow: hsl(189, 58%, 57%);
+        --scissors-gradient: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+        --scissors-shadow: #c56e1f;
+        --paper-gradient: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+        --paper-shadow: #2645c2;
+        --rock-gradient: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+        --rock-shadow: #a11434;
+        --lizard-gradient: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+        --lizard-shadow: #5f37aa;
+        --cyan-gradient: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+        --cyan-shadow: #2d8fac;
 
         // Neutral
 
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
         // Background
 
-        --Radial-Gradient: linear-gradient(90deg, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+        --Radial-Gradient: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 
 
         // Fonts
@@ -42,13 +42,14 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        overflow: ${props => props.stateOverflow === true ? 'hidden' : 'initial'};
+        overflow: ${(props) =>
+          props.stateOverflow === true ? "hidden" : "initial"};
     }
 
     h1, h2 {
         margin: 0;
         padding: 0;
     }
-`
+`;
 
 export default GlobalStyle;
