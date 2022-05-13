@@ -30,7 +30,7 @@ const StepPlayerPick = (props) => {
         borderShadowBG={"var(--cyan-shadow)"}
         onClick={(e) => props.getUserPick(e)}
         borderBG={"var(--cyan-gradient)"}
-        top={80}
+        top={60}
         left={-60}
         value={"cyan"}
       >
@@ -41,7 +41,7 @@ const StepPlayerPick = (props) => {
         borderShadowBG={"var(--paper-shadow)"}
         onClick={(e) => props.getUserPick(e)}
         borderBG={"var(--paper-gradient)"}
-        top={80}
+        top={60}
         right={-60}
         value={"paper"}
       >

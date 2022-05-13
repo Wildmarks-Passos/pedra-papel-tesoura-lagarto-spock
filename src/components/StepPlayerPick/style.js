@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: block;
   position: relative;
+
+  @media (max-width: 768px) {
+    transform: scale(0.7);
+  }
 `;
 
 export const Pick = styled.div`
@@ -27,8 +31,7 @@ export const Pick = styled.div`
   cursor: pointer;
 
   &:hover {
-    width: 135px;
-    height: 135px;
+    transform: scale(1.06);
     box-shadow: ${(props) => `${props.borderShadowBG} 0px 5px 0px 0px,
                               #fff 0px 2.5px 5px 7px`};
     transition: all ease 0.2s;

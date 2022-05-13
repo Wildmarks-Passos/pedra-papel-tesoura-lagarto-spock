@@ -6,6 +6,10 @@ export const Container = styled.div`
   justify-content: end;
   bottom: 20px;
   right: 20px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const ButtonRules = styled.button`

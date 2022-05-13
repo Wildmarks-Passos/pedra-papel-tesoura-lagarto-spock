@@ -1,10 +1,13 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Board = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 60px 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 60px 0;
-`
+  @media (max-width: 768px) {
+    height: auto;
+  }
+`;

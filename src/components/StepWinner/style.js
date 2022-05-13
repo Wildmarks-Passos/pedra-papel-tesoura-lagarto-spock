@@ -6,6 +6,13 @@ export const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
   color: #fff;
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    row-gap: 90px;
+  }
 `;
 
 export const PlayerPick = styled.div`
@@ -14,12 +21,21 @@ export const PlayerPick = styled.div`
   justify-content: center;
   align-items: center;
   gap: 60px;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 25px;
+  }
 `;
 
 export const TextPlayer = styled.h3`
   font-weight: 600;
   letter-spacing: 1.5px;
   z-index: 5;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const Pick = styled.div`
@@ -43,6 +59,8 @@ export const Pick = styled.div`
          `
       : `${props.borderShadowBG} 0px 5px 0px 0px`};
   transition: all 0.4s ease 0.3s;
+  z-index: 5;
+
   div {
     display: flex;
     justify-content: center;
@@ -59,7 +77,22 @@ export const Pick = styled.div`
     height: 80%;
     box-shadow: rgb(204 204 204) 0px 6px 0px 0px inset;
   }
+
+  @media (max-width: 768px) {
+    width: 130px;
+    height: 130px;
+
+    box-shadow: ${(props) =>
+      props.isWinner
+        ? `${props.borderShadowBG} 0px 5px 0px 0px,
+         rgb(31 55 86 / 80%) 0px 0px 0px 15px,
+         rgb(31 55 86 / 60%) 0px 0px 0px 35px,
+         rgb(31 55 86 / 40%) 0px 0px 0px 65px
+         `
+        : `${props.borderShadowBG} 0px 5px 0px 0px`};
+  }
 `;
+
 export const LoadingHousePick = styled.div`
   display: ${(props) => (props.render === true ? "flex" : "none")};
   justify-content: center;
@@ -101,6 +134,20 @@ export const ContainerPlayAgain = styled.div`
     :hover {
       transform: scale(1.1);
       transition: all ease 0.2s;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-column: 1 / 3;
+    order: 3;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    button {
+      width: 220px;
+      height: 50px;
     }
   }
 `;
