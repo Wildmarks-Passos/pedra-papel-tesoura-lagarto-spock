@@ -9,12 +9,6 @@ import {
 
 import { rules } from "../GameBoard";
 
-import rock from "../../images/icon-rock.svg";
-import paper from "../../images/icon-paper.svg";
-import scissors from "../../images/icon-scissors.svg";
-import lizard from "../../images/icon-lizard.svg";
-import cyan from "../../images/icon-spock.svg";
-
 const StepWinner = (props) => {
   return (
     <Container>
@@ -27,7 +21,7 @@ const StepWinner = (props) => {
           render={true}
         >
           <div>
-            <img alt="qualquer" src={rules[props.userPick].image} />
+            <img alt="User Pick" src={rules[props.userPick].image} />
           </div>
         </Pick>
       </PlayerPick>
@@ -47,17 +41,10 @@ const StepWinner = (props) => {
           render={props.housePick ? true : false}
         >
           <div>
-            {props.housePick === "rock" ? (
-              <img alt="qualquer" src={rock} />
-            ) : props.housePick === "paper" ? (
-              <img alt="qualquer" src={paper} />
-            ) : props.housePick === "scissors" ? (
-              <img alt="qualquer" src={scissors} />
-            ) : props.housePick === "lizard" ? (
-              <img alt="qualquer" src={lizard} />
-            ) : (
-              <img alt="qualquer" src={cyan} />
-            )}
+            <img
+              alt="House Pick"
+              src={props.housePick ? rules[props.housePick].image : null}
+            />
           </div>
         </Pick>
       </PlayerPick>

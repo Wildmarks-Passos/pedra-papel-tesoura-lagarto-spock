@@ -11,6 +11,7 @@ const StepPlayerPick = (props) => {
       {Object.entries(rules).map(([key, value]) => {
         return (
           <Pick
+            key={key}
             borderShadowBG={`var(${value.borderShadowBG})`}
             onClick={(e) => props.getUserPick(e)}
             borderBG={`var(${value.borderBG})`}
