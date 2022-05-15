@@ -59,7 +59,7 @@ export const Pick = styled.div`
          `
       : `${props.borderShadowBG} 0px 5px 0px 0px`};
   transition: all 0.4s ease 0.3s;
-  z-index: 5;
+  z-index: 3;
 
   div {
     display: flex;
@@ -103,6 +103,11 @@ export const LoadingHousePick = styled.div`
   background-color: hsl(237, 49%, 15%);
 
   border-radius: 50%;
+
+  @media (max-width: 768px) {
+    width: 115px;
+    height: 115px;
+  }
 `;
 
 export const ContainerPlayAgain = styled.div`

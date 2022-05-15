@@ -29,7 +29,7 @@ export const GameScore = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding: 0 50px;
+  padding: 22px 45px;
   background-color: #fafafa;
   border-radius: 10px;
 
