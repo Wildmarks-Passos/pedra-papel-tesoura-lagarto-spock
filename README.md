@@ -27,8 +27,6 @@ Users should be able to:
 
 ### Animated Gifs
 
-sdsdsd
-
 - Desktop Version
 
   - ![Tela Desktop](./src/screenshot/Tela_PC.gif)
