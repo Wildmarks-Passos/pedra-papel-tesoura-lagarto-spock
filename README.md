@@ -28,7 +28,10 @@ Users should be able to:
 ### Animated Gifs
 
 - Desktop Version
+<<<<<<< HEAD
 
+=======
+>>>>>>> ab81eb74b30b8cfe9ee55e5a38cee1c2e713e31a
   - ![Tela Desktop](./src/screenshot/Tela_PC.gif)
 
 - Mobile Version
