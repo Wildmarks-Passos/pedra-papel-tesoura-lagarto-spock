@@ -28,10 +28,11 @@ Users should be able to:
 ### Animated Gifs
 
 - Desktop Version
-  ![Tela Desktop](./src/screenshot/Tela_PC.gif)
+
+  - ![Tela Desktop](./src/screenshot/Tela_PC.gif)
 
 - Mobile Version
-  ![Tela Mobile](./src/screenshot/Tela_Celular.gif)
+  - ![Tela Mobile](./src/screenshot/Tela_Celular.gif)
 
 ### Links
 
